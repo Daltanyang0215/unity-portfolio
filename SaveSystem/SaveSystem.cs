@@ -12,11 +12,11 @@ public class SaveSystem
     {
         get
         {
-            // ¼¼ÀÌºê°¡ ¾øÀ¸¸é ºÒ·¯¿À±â
+            // ì„¸ì´ë¸Œê°€ ì—†ìœ¼ë©´ ë¶ˆëŸ¬ì˜¤ê¸°
             if (_save == null)
                 _save = LoadData();
 
-            // ºÒ·¯¿À±â¸¦ Çß´Âµ¥µµ ¾øÀ¸¸é ºó °É ÁÖ±â
+            // ë¶ˆëŸ¬ì˜¤ê¸°ë¥¼ í–ˆëŠ”ë°ë„ ì—†ìœ¼ë©´ ë¹ˆ ê±¸ ì£¼ê¸°
             if (_save == null)
                 _save = new GlobalSaveData();
             return _save;
