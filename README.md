@@ -13,7 +13,6 @@
 
 | 분류 | 시스템 | 출처 |
 |------|--------|------|
-| 아키텍처 | [TurnBattleCore](./TurnBattleCore/) | CookAppsCard |
 | 아키텍처 | [MinigameFramework](./MinigameFramework/) | Mr.Kim |
 | 검증 · 툴링 | [DamageEngine](./DamageEngine/) | GunRogue |
 | 검증 · 툴링 | [DamageLabEditor](./DamageLabEditor/) | GunRogue |
@@ -26,20 +25,6 @@
 ---
 
 ## 아키텍처
-
-### [TurnBattleCore](./TurnBattleCore/)
-
-**출처**: TurnCard (세로형 턴제 카드 배틀, Android)
-
-전투 로직(코어)과 Unity 표현(뷰)을 완전히 분리한 턴제 전투 시스템입니다.
-코어는 `UnityEngine` 비의존 순수 C#이며, 코어와 뷰가 주고받는 데이터는 전부 ID 기반이라 그대로 직렬화·전송이 가능합니다. 입력 소스를 인터페이스로 추상화해 로컬·AI·원격이 바뀌어도 전투 루프는 변경되지 않으며, 무작위는 전부 시드 RNG를 경유해 전투 전체가 재현됩니다.
-
-| 파일 | 설명 |
-|------|------|
-| `CombatResolver.cs` | 행동 1건 해소 → 이벤트 생성 (코어 진입점) |
-| `BattleEvent.cs` / `ActionRequest.cs` | ID 기반 코어 ↔ 뷰 계약 |
-| `IActionSource.cs` | 입력 소스 추상화 |
-| `ActionValidator.cs` | 코어 진입 전 검증 게이트 |
 
 ### [MinigameFramework](./MinigameFramework/)
 
