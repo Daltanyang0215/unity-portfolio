@@ -5,7 +5,7 @@
 실무 및 개인 프로젝트에서 작성한 코드 중, 설계 의도를 잘 담고 있는 시스템을 선별하여 정리한 포트폴리오입니다.
 
 - **GitHub**: [Daltanyang0215](https://github.com/Daltanyang0215)
-- **Portfolio**: [Notion](https://satisfying-hill-813.notion.site/3658af61fa204514b09d4c0b9f8a8452)
+- **Portfolio**: [daltanyang0215.github.io](https://daltanyang0215.github.io)
 
 ---
 
@@ -63,7 +63,7 @@
 **출처**: GunRogue (총기 조합 로그라이크)
 
 데미지 공식 엔진과, 그 수치를 Unity 없이 자동 검증하는 콘솔 도구 2종입니다.
-엔진을 `UnityEngine` 비의존으로 작성해 런타임·에디터 툴·콘솔 하네스가 같은 코드를 공유합니다. 회귀 하네스는 Assert 395건으로 데미지·경제·상점·보스를 검사하며, 기대값을 밸런스 상수에서 파생시켜 수치 변경이 자동 반영됩니다. 조합 탐색 랩은 전수 불가능한 조합 공간을 빔 서치로 훑어 밸런스 사각을 찾습니다.
+엔진을 `UnityEngine` 비의존으로 작성해 런타임·에디터 툴·콘솔 하네스가 같은 코드를 공유합니다. 회귀 하네스는 데미지·경제·상점·보스를 검사하며(현재 약 510건 · 수록본은 395건 시점의 사본), 기대값을 밸런스 상수에서 파생시켜 수치 변경이 자동 반영됩니다. 조합 탐색 랩은 전수 불가능한 조합 공간을 빔 서치로 훑어 밸런스 사각을 찾습니다.
 
 | 파일 | 설명 |
 |------|------|
@@ -90,10 +90,10 @@
 
 ### [RemoteSpecSystem](./RemoteSpecSystem/)
 
-**출처**: IdleMineForge (방치형 채굴, Android 출시 준비)
+**출처**: IdleMineForge (방치형 채굴, Android 출시·운영)
 
 앱 업데이트 없이 밸런스를 조정하고 지표를 수집하기 위한 운영 계층입니다.
-Remote Config로 버전만 확인해 캐시가 최신이면 Firestore를 조회하지 않고, 원격 실패 시 동봉 CSV로 폴백합니다. Firebase SDK 부재 환경에서도 컴파일이 깨지지 않도록 심볼로 격리했으며, 실제로 이 모듈은 이후 다른 프로젝트에 패키지로 이식해 재사용했습니다.
+Remote Config로 버전만 확인해 캐시가 최신이면 Firestore를 조회하지 않고, 원격 실패 시 동봉 CSV로 폴백합니다. Firebase SDK 부재 환경에서도 컴파일이 깨지지 않도록 심볼로 격리했습니다.
 
 | 파일 | 설명 |
 |------|------|
@@ -144,7 +144,7 @@ RenderTexture 기반 캡처, Isometric 좌표 보정, Physics 미의존 오브�
 |------|------|
 | `CameraCapture.cs` | 캡처 흐름 전체 담당, CaptureData 생성 |
 
-> 이후 3D 후속작(Paparazzi3D)에서 같은 문제를 3D 환경으로 확장해 재구현했습니다.
+> 2D로 계획했으나 애니메이션 작업량 때문에 3D로 전환했고(Paparazzi3D), 캡처 판정도 3D 환경에 맞춰 다시 구현했습니다.
 
 ### [MeshForgeSystem](./MeshForgeSystem/)
 
